@@ -1,0 +1,19 @@
+s-restaurant {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+}
+
+s-restaurant-info {
+	flex: 1;
+}
+span.red {
+	color: red;
+}
+span.green {
+	color: green;
+}
+
+s-restaurant-menu {
+	flex: 1;
+}
