@@ -6,6 +6,8 @@ import { SMenuSearchSuggestionItem } from './';
 
 import menuData from '../../../../../data/menuData';
 
+import styles from './search.css';
+
 @CustomElement('s-menu-search')
 export class SMenuSearch extends Component {
 	constructor() {
@@ -70,9 +72,9 @@ export class SMenuSearch extends Component {
 	_render() {
 		this._template.innerHTML = `
 			<div class="sms-container">
-				<input type="search" class="sms-input" />
+				<input type="text" class="sms-input" placeholder="Search for products.."/>
+				<span class="sms-icon">&#128269;</span>
 				<ul class="sms-suggestions">
-					asd
 					${this.renderSuggestions()}
 				</ul>
 			</div>			

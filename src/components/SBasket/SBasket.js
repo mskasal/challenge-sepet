@@ -4,6 +4,8 @@ import { CustomElement } from '../../utils/index';
 
 import SBasketItem from './SBasketItem';
 
+import styles from './basket.css';
+
 @CustomElement('s-basket')
 export class SBasket extends Component {
 	constructor() {
@@ -59,7 +61,7 @@ export class SBasket extends Component {
 		const { _itemList } = this;
 
 		// Check if there is no item to render
-		if (_itemList.size === 0) return '<span>No item in your basket.</span>';
+		if (_itemList.size === 0) return '<span class="bs-empty">No item in your basket.</span>';
 
 		let itemListStr = '';
 
@@ -87,7 +89,7 @@ export class SBasket extends Component {
 	_render() {
 		this._template.innerHTML = `
 			<div class="s-basket">
-				<h5>Basket</h5>
+				<h5 class="s-basket-title">Basket</h5>
 				<div class="sb-basket-items">
 					<ul class="sb-item-list">
 						${this.renderItemList()}

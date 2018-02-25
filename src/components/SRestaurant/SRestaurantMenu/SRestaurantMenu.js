@@ -6,6 +6,8 @@ import { SMenuSearch } from './SMSearch';
 
 import menuData from '../../../../data/menuData';
 
+import styles from './restaurantMenu.css';
+
 @CustomElement('s-restaurant-menu')
 export class SRestaurantMenu extends Component {
 	constructor() {
@@ -40,7 +42,7 @@ export class SRestaurantMenu extends Component {
 				<h3>Menu</h3>
 				<s-menu-search />
 			</div>
-			<div>
+			<div class="sm-categories">
 				${this.renderCategories()}
 			</div>
 		`;

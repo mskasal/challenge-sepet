@@ -43,7 +43,7 @@ export class SRestaurantInfo extends Component {
 		const { CategoryDisplayName } = this._categoryData;
 
 		this._template.innerHTML = `
-			<h4>${CategoryDisplayName}</h4>
+			<h4 class="c-title">${CategoryDisplayName}</h4>
 			<ul class="c-products">
 				${this.renderProducts()}
 			</ul>

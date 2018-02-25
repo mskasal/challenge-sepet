@@ -29,10 +29,13 @@ export class SRestaurantInfo extends Component {
 			<div class="restaurant-info">
 				<div class="r-header">
 					<h3 class="r-title">${DisplayName}</h3>
+					<span class="r-availability">
+						${status}
+					</span>
 					<div class="r-points">
 						<span class="p-serving">Serving ${Serving}</span>
-						<span class="p-speed">Speed ${Speed}</span>
-						<span class="p-flavor">Flavour ${Flavour}</span>
+						<span class="p-speed"> - Speed ${Speed}</span>
+						<span class="p-flavor"> - Flavour ${Flavour}</span>
 					</div>
 				</div>
 				
@@ -42,9 +45,6 @@ export class SRestaurantInfo extends Component {
 						</div>
 						<div class="i-payment-methods">
 							${PaymentMethods.slice(0,3).map((item) => ` ${item.PaymentMethodName}`)}
-						</div>
-						<div class="i-availability">
-							${status}
 						</div>
 				</div>
 			</div>

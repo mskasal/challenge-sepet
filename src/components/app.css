@@ -3,6 +3,7 @@ app-root {
 	min-height: 100vh;
 	flex-direction: column;
 	font-family: Roboto, Arial, sans-serif;
+	color: #333333;
 }
 
 .app-header {
@@ -18,8 +19,28 @@ app-root {
 .app-footer {
 	border-top: 1px solid #c1c1c1;
 	font-size: 14px;
+	height: 50px;
+	align-self: stretch;
 }
 
 .app-aside {
-	flex: 0 0 25%;
+	flex: 0 1 25%;
+}
+
+s-basket {
+	position: fixed;
+	right: 0;
+	z-index: 1040;
+	background-color: #FFFFFF;
+}
+ul {
+	list-style-type: none;
+}
+button {
+	user-select: none;
+	outline:none;
+	cursor: pointer;
+	text-align: center;
+	color: #fff;
+	border: 1px solid transparent;
 }

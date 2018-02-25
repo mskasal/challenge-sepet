@@ -60,10 +60,12 @@ export class SBasketItem extends Component {
 
 		this._template.innerHTML = `
 			<li>
-				<span>${DisplayName}</span>
-				<input type="number" class="sbi-count" min="0" value="${count}"/>
-				<button class="bs-remove">x</button>
-				<span>${ListPrice}</span>
+				<span class="bs-item-name">${DisplayName}</span>
+				<div class="bs-item-actions">
+					<input type="number" class="sbi-count" min="0" value="${count}"/>
+					<button class="bs-remove">&times;</button>
+					<span class="bs-price">${ListPrice}</span>
+				</div>
 			</li>
 		`;
 	}

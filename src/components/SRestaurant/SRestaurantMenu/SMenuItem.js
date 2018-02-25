@@ -41,12 +41,12 @@ export class SMenuItem extends Component {
 		const { DisplayName, ListPrice, ProductId } = this._pData;
 
 		this._template.innerHTML = `
-			<li>
+			<li class="p-list-item">
 				<button
 					class="p-add-to-basket"
-				>+</button>
-				<span>${DisplayName}</span>
-				<span>${ListPrice}</span>
+				>&#43;</button>
+				<span class="p-name">${DisplayName}</span>
+				<span class="p-price"> - ${ListPrice}</span>
 			</li>		
 		`;
 	}

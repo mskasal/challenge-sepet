@@ -1,11 +1,12 @@
 s-restaurant {
 	flex: 1;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+	padding: 30px 40px ;
 }
 
 s-restaurant-info {
-	flex: 1;
+
 }
 span.red {
 	color: red;
@@ -15,5 +16,28 @@ span.green {
 }
 
 s-restaurant-menu {
-	flex: 1;
+	padding: 10px;
+}
+
+.r-points {
+	font-size: 17px;
+	color: #E6853D;
+	font-style: italic;
+	margin-bottom: 15px;
+}
+
+.r-title {
+	padding: 0;
+	margin: 0 0 10px 0;
+	display: inline-block;
+}
+
+.r-availability {
+	margin-left: 5px;
+	font-size: 14px;
+}
+
+.i-payment-methods {
+	margin-top: 10px;
+	max-width: 500px;
 }

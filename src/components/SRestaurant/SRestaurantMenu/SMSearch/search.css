@@ -1,0 +1,46 @@
+.sms-container {
+	height: 60px;
+	padding: 10px 5px;
+}
+
+.sms-item {
+
+}
+
+.sms-input {
+	height: 35px;
+	width: 280px;
+	display: inline-block;
+	font-size: 18px;
+	border: 1px solid #c4c4c4;
+	border-radius: 10px;
+	padding-left: 10px;
+	outline: none;
+}
+.sms-input:focus {
+	box-shadow: 1px 1px 12px 3px #c4c4c4;
+}
+.sms-suggestions {
+	z-index: 1040;
+	position: relative;
+	padding: 20px 10px;
+	width: 280px;
+	border-radius: 12px;
+	margin-top: 3px;
+	background-color: #FFFFFF;
+	border: 1px solid #c1c1c1;
+	box-shadow: 1px 1px 12px 3px #c4c4c4;
+}
+.sms-suggestions li {
+	padding: 5px 0 5px 12px;
+	cursor: pointer;
+}
+.sms-suggestions li:hover {
+	color: #000;
+	background-color: #c1c1c1;
+}
+.sms-icon {
+	display: inline-block;
+	font-size: 25px;
+	opacity: .6;
+}

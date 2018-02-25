@@ -42,7 +42,7 @@ export class SMenuSearch extends Component {
 	_render() {
 		const { name } = this._smsIData;
 		this._template.innerHTML = `
-			<li>${ name}</li>				
+			<li class="sms-item">${ name}</li>				
 		`;
 	}
 }
