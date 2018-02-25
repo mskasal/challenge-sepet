@@ -1,10 +1,8 @@
-import { Component } from '../../interfaces/index';
-import { CustomElement } from '../../utils/index';
+import { Component } from '../../interfaces';
+import { CustomElement } from '../../utils';
 
-import {
-	SRestaurantInfo,
-	SRestaurantMenu
-} from './';
+import { SRestaurantInfo } from './';
+import { SRestaurantMenu } from './SRestaurantMenu'
 
 import styles from './restaurant.css';
 

@@ -1,5 +1,6 @@
-import { Component } from '../../interfaces/index';
-import { CustomElement } from '../../utils/index';
+import { Component } from '../../interfaces';
+import { CustomElement } from '../../utils';
+
 import restaurantData from '../../../data/restoranData';
 
 @CustomElement('s-restaurant-info')
@@ -19,6 +20,7 @@ export class SRestaurantInfo extends Component {
 			PaymentMethods,
 			IsOpen
 		} = this._info;
+
 		const status = (IsOpen)
 			? '<span class="green">Open</span>'
 			: '<span class="red">Closed</span>';

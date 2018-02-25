@@ -12,14 +12,7 @@ export class App extends Component {
 
 		this._template = document.createElement('template');
 	}
-
-	connectedCallback() {
-		this._render();
-
-		this.appendChild(this._template.content.cloneNode(true));
-	}
 	_render() {
-
 		this._template.innerHTML = `
 			<header class="app-header">
 				<h2 class="app-title">Challenge Sepet</h2>

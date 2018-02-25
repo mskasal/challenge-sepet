@@ -10,9 +10,13 @@ export class SBasketItem extends Component {
 	connectedCallback() {
 		this._render();
 		this.appendChild(this._template.content.cloneNode(true));
+
+		// Declare child nodes
 		this.$removeButton = this.querySelector('.bs-remove');
 		this.$countInput = this.querySelector('.sbi-count');
+
 		// TODO: Fix binding problem with better usage of lifecycle
+		// Add actions
 		const data = this._sbData;
 		this.$removeButton.addEventListener('click', (event) => {
 			event.preventDefault();
@@ -20,6 +24,7 @@ export class SBasketItem extends Component {
 		});
 		this.$countInput.addEventListener('change', (event) => {
 			event.preventDefault();
+
 			if (parseInt(event.target.value) < 0) {
 				event.target.value = 0;
 				return;

@@ -1,9 +1,7 @@
-import { Component } from '../../interfaces/index';
-import { CustomElement } from '../../utils/index';
+import { Component } from '../../../interfaces';
+import { CustomElement } from '../../../utils';
 
-import {
-	SMenuItem
-} from './';
+import { SMenuItem } from './';
 
 @CustomElement('s-menu-category')
 export class SRestaurantInfo extends Component {
@@ -28,11 +26,14 @@ export class SRestaurantInfo extends Component {
 	renderProducts() {
 		const { Products } = this._categoryData;
 
-		// p-data='${JSON.stringify(product)}' is a problem
-		// We have to use single quote(')
+		// p-data="${JSON.stringify(product)}" is a problem when parsing
+		// We have to use single quotes(')
 		return Products.reduce(
 			(start, product) =>
-				start + `<s-menu-item
+				start +
+				`<s-menu-item
+					id="p-${product.ProductId.slice(-6)}"
+					tabindex="-1"
 					p-data='${JSON.stringify(product)}'
 				></s-menu-item>`, ''
 		);
@@ -42,12 +43,10 @@ export class SRestaurantInfo extends Component {
 		const { CategoryDisplayName } = this._categoryData;
 
 		this._template.innerHTML = `
-			<div>
-				<h4>${CategoryDisplayName}</h4>
-				<ul class="c-products">
-					${this.renderProducts()}
-				</ul>
-			</div>
+			<h4>${CategoryDisplayName}</h4>
+			<ul class="c-products">
+				${this.renderProducts()}
+			</ul>
 		`;
 	}
 }

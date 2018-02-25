@@ -1,5 +1,5 @@
-import { Component } from '../../interfaces/index';
-import { CustomElement } from '../../utils/index';
+import { Component } from '../../../interfaces';
+import { CustomElement } from '../../../utils';
 
 @CustomElement('s-menu-item')
 export class SMenuItem extends Component {
@@ -10,6 +10,7 @@ export class SMenuItem extends Component {
 	connectedCallback() {
 		this._render();
 		this.appendChild(this._template.content.cloneNode(true));
+
 		this.$addButton = this.querySelector('.p-add-to-basket');
 
 		const data = this._pData;
@@ -42,7 +43,6 @@ export class SMenuItem extends Component {
 		this._template.innerHTML = `
 			<li>
 				<button
-					id="product-${ProductId.slice(-5)}"
 					class="p-add-to-basket"
 				>+</button>
 				<span>${DisplayName}</span>
