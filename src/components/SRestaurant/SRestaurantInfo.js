@@ -9,11 +9,6 @@ export class SRestaurantInfo extends Component {
 		this._template = document.createElement('template');
 		this._info = restaurantData;
 	}
-
-	connectedCallback() {
-		this._render();
-		this.appendChild(this._template.content.cloneNode(true));
-	}
 	_render() {
 		const {
 			Serving,
@@ -44,7 +39,7 @@ export class SRestaurantInfo extends Component {
 							${RestaurantCuisines.map((item) => ` ${item.Name}`)}
 						</div>
 						<div class="i-payment-methods">
-							${PaymentMethods.map((item) => ` ${item.PaymentMethodName}`)}
+							${PaymentMethods.slice(0,3).map((item) => ` ${item.PaymentMethodName}`)}
 						</div>
 						<div class="i-availability">
 							${status}

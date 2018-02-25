@@ -14,11 +14,6 @@ export class SRestaurant extends Component {
 		super();
 		this._template = document.createElement('template');
 	}
-
-	connectedCallback() {
-		this._render();
-		this.appendChild(this._template.content.cloneNode(true));
-	}
 	_render() {
 		this._template.innerHTML = `
 			<s-restaurant-info></s-restaurant-info>

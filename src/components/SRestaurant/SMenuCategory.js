@@ -4,7 +4,6 @@ import { CustomElement } from '../../utils/index';
 import {
 	SMenuItem
 } from './';
-import menuData from '../../../data/menuData';
 
 @CustomElement('s-menu-category')
 export class SRestaurantInfo extends Component {
@@ -12,46 +11,39 @@ export class SRestaurantInfo extends Component {
 		super();
 		this._template = document.createElement('template');
 	}
-
-	connectedCallback() {
-		this._render();
-		this.appendChild(this._template.content.cloneNode(true));
-	}
 	attributeChangedCallback(name, oldValue, newValue) {
 		switch(name) {
-		case 'c-name':
-			this.cName = newValue;
+		case 'c-data':
+			this._categoryData = JSON.parse(newValue);
+			// Remove data attribute for cleaner dom
+			this.removeAttribute('c-data');
 			break;
-		case 'c-index':
-			this.cIndex = newValue;
-			break;
-		case 'c-id':
-			this.cId = newValue;
+		default:
 			break;
 		}
 	}
 	static get observedAttributes() {
-		return ['c-name', 'c-index', 'c-id'];
+		return ['c-data'];
 	}
 	renderProducts() {
-		this._categoryData = menuData[this.cIndex];
 		const { Products } = this._categoryData;
 
-		return Products.map(
-			(product, index) =>
-				`<s-menu-item
-					p-index="${index}"
-					p-name="${product.DisplayName}"
-					p-price="${product.ListPrice}"
-				></s-menu-item>`
-		).join('');
+		// p-data='${JSON.stringify(product)}' is a problem
+		// We have to use single quote(')
+		return Products.reduce(
+			(start, product) =>
+				start + `<s-menu-item
+					p-data='${JSON.stringify(product)}'
+				></s-menu-item>`, ''
+		);
 	}
 	_render() {
-		const { cName } = this;
+		if (!this._categoryData) return;
+		const { CategoryDisplayName } = this._categoryData;
 
 		this._template.innerHTML = `
 			<div>
-				<h4>${cName}</h4>
+				<h4>${CategoryDisplayName}</h4>
 				<ul class="c-products">
 					${this.renderProducts()}
 				</ul>
