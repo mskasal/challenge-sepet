@@ -84,7 +84,7 @@ export class SBasket extends Component {
 				total = total +
 					(item.count * parseFloat(item.data.ListPrice.replace(',','.')));
 			});
-		return Math.round(total).toFixed(2).toString().replace('.', ',');
+		return total.toFixed(2).toString().replace('.', ',');
 	}
 	_render() {
 		this._template.innerHTML = `
