@@ -21,19 +21,43 @@ export class SMenuSearch extends Component {
 
 		this.$searchInput = this.querySelector('.sms-input');
 		this.$searchSuggestions = this.querySelector('.sms-suggestions');
+		this.hideSuggestions();
 
-		this.$searchInput.addEventListener('change', (event) => {
+		this.$searchInput.addEventListener('keyup', (event) => {
 			event.preventDefault();
 
 			this.findSuggestions(event);
 		});
+
+		document.body.addEventListener('click', () => {
+			this.hideSuggestions();
+		});
+	}
+	/**
+		Showing and hiding an element not very effective
+		I could create a suggestions Component and extend
+		Component with show, hide methods
+	*/
+	showSuggestions() {
+		this.$searchSuggestions.style.display = 'block';
+	}
+	hideSuggestions() {
+		this.$searchSuggestions.style.display = 'none';
 	}
 	findSuggestions(event) {
 		// find and render suggestions
 		const data = this._searchData;
 		const keyword = event.currentTarget.value;
+
 		this._suggestions = Search(keyword, data) || [];
-		this.$searchSuggestions.innerHTML = this.renderSuggestions();
+
+		if (this._suggestions.length > 0) {
+			this.$searchSuggestions.innerHTML = this.renderSuggestions();
+			this.showSuggestions();
+
+		} else {
+			this.hideSuggestions();
+		}
 	}
 	renderSuggestions() {
 		const { _suggestions } = this;
@@ -48,6 +72,7 @@ export class SMenuSearch extends Component {
 			<div class="sms-container">
 				<input type="search" class="sms-input" />
 				<ul class="sms-suggestions">
+					asd
 					${this.renderSuggestions()}
 				</ul>
 			</div>			

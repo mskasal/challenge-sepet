@@ -9,5 +9,5 @@ export default function Flat(data) {
 		return { name: category.DisplayName, id: `#c-${category.Oid}` } }
 	);
 
-	return [ ...categories, ...products]
+	return [ ...categories, ...products];
 }
