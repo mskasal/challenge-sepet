@@ -1,3 +1,4 @@
+/* globals __dirname */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -21,6 +22,13 @@ module.exports = {
 				exclude: [/node_modules/, /dist/],
 				use: 'babel-loader',
 				include: PATHS.src
+			},
+			{
+				test: /\.css$/,
+				use: [
+					{ loader: "style-loader" },
+					{ loader: "css-loader" }
+				]
 			}
 		]
 	},

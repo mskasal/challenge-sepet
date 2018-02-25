@@ -1,0 +1,109 @@
+.s-basket {
+	box-shadow: 0px 1px 10px #c1c1c1;
+	border-radius: 8px;
+	padding: 10px;
+	margin-right: 10px;
+	min-width: 300px;
+	z-index: 1040;
+}
+
+h5.s-basket-title {
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+}
+
+.sb-item-list {
+	padding-left: 10px;
+	padding-bottom: 18px;
+	border-bottom: 1px solid #c1c1c1;
+	position: relative;
+}
+.sb-item-list::after {
+	content:'+';
+	position: absolute;
+	color: #c1c1c1;
+	left: 0;
+	bottom: 0;
+}
+
+s-basket-item {
+	margin-bottom: 4px;
+	display: block;
+}
+s-basket-item > li{
+	display: flex;
+	justify-items: flex-end;
+	justify-content: space-between;
+}
+.bs-item-actions {
+	align-self: flex-end;
+}
+.bs-item-name {
+	font-size: 14px;
+	align-self: flex-start;
+}
+
+.sbi-count {
+	width: 35px;
+	font-size: 12px;
+	border: 1px solid #c4c4c4;
+	padding: 0 3px;
+	border-radius: 3px;
+	-webkit-box-sizing: border-box;
+}
+
+.sbi-count::-webkit-inner-spin-button {
+	opacity: 1;
+	width: 10px;
+}
+
+.bs-remove {
+	font-size: 15px;
+	background-color: #D3483E;
+	border: none;
+	padding: 1px 4px 3px 4px;
+	line-height: 13px;
+	border-radius: 3px;
+}
+
+.bs-price {
+	font-size: 14px;
+	font-style: italic;
+	margin-left: 4px;
+	width: 50px;
+	display: inline-block;
+	text-align: right;
+}
+.bs-price::after {
+	content: '₺';
+	font-size: 17px;
+	margin-left: 2px;
+}
+
+.sb-basket-total {
+	font-size: 18px;
+	text-align: right;
+	font-style: italic;
+	padding: 0 0 10px 5px;
+}
+.sb-basket-total::after {
+	content: '₺';
+	font-size: 18px;
+	margin-left: 2px;
+}
+
+.sb-basket-submit button{
+	border-radius: 8px;
+	font-size: 17px;
+	background-color: seagreen;
+	width: 100%;
+	padding: 6px 12px;
+}
+
+.bs-empty {
+	padding: 20px 40px;
+	display: inline-block;
+	width: 200px;
+	text-align: center;
+}

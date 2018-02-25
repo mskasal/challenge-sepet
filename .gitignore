@@ -134,3 +134,4 @@ fabric.properties
 
 .idea
 /dist/*
+.DS_Store

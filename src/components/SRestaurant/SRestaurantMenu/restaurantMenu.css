@@ -1,0 +1,44 @@
+.sm-categories {
+
+}
+
+s-menu-category {
+	border-bottom: 1px solid #c3c3c3;
+	display: block;
+}
+
+.c-title {
+	margin: 20px 0 0 2px;
+	padding-bottom: 0;
+}
+
+.c-products {
+	margin-top: 15px;
+	user-select: none;
+}
+
+.p-list-item {
+	margin: 5px 0;
+	user-select: none;
+}
+
+.p-price {
+	font-style: italic;
+	font-size: 15px;
+}
+.p-price::after {
+	content: '₺';
+	font-size: 15px;
+	margin-left: 2px;
+}
+
+.p-name {
+	margin-left: 10px;
+}
+
+.p-add-to-basket {
+	border-radius: 3px;
+	font-size: 15px;
+	background-color: seagreen;
+	line-height: 20px;
+}
