@@ -32,6 +32,8 @@ They can add items to basket or delete them or change count of them.
 - I did not think about browser compatibility. I used Chrome for development and debugging.
 Custom components could not work as expected on other browsers
 - I did not write any test. (maybe later, I need a good way to test custom components).
+- I could create a EventEmitter singleton for communication between Components
+however, native event emitter can deal with such a small app.
 
 #### What did I assume?
 
