@@ -31,13 +31,13 @@ They can add items to basket or delete them or change count of them.
 #### What did I do not?
 - I did not think about browser compatibility. I used Chrome for development and debugging.
 Custom components could not work as expected on other browsers
-- I did not write any test. (maybe later, I need a good way to test custom components).
-- I could create a EventEmitter singleton for communication between Components
+- I did not write any test. (maybe later, I need a good way to test web components).
+- I could create an EventEmitter singleton for communication between Components
 however, native event emitter can deal with such a small app.
 
 #### What did I assume?
 
-- I assumed any restaurant menu can not be so big for listing(+200 ;)).
+- I assumed any restaurant can not have too big menu for listing(+200 ;)).
 
 #### Why Web Components?
 

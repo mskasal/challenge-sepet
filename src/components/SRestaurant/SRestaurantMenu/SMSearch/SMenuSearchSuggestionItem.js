@@ -20,9 +20,7 @@ export class SMenuSearch extends Component {
 		});
 	}
 	suggestionClickHandler(data) {
-		// Check if it is a product or category
-		let event;
-		event = new CustomEvent('onSuggestionClicked', { detail: { ...data } });
+		const event = new CustomEvent('onSuggestionClicked', { detail: { ...data } });
 		document.dispatchEvent(event);
 	}
 	attributeChangedCallback(name, oldValue, newValue) {
@@ -42,7 +40,7 @@ export class SMenuSearch extends Component {
 	_render() {
 		const { name } = this._smsIData;
 		this._template.innerHTML = `
-			<li class="sms-item">${ name}</li>				
+			<li class="sms-item">${name}</li>				
 		`;
 	}
 }
