@@ -38,7 +38,7 @@ export class SMenuItem extends Component {
 		return ['p-data'];
 	}
 	_render() {
-		const { DisplayName, ListPrice, ProductId } = this._pData;
+		const { DisplayName, ListPrice } = this._pData;
 
 		this._template.innerHTML = `
 			<li class="p-list-item">

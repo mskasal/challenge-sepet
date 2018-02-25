@@ -54,8 +54,8 @@ s-basket-item > li{
 }
 
 .sbi-count::-webkit-inner-spin-button {
-	opacity: 1;
-	width: 10px;
+	opacity: 0;
+	margin-right: -10000px;
 }
 
 .bs-remove {

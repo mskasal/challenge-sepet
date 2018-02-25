@@ -22,8 +22,8 @@ export class SRestaurantMenu extends Component {
 		document.addEventListener('onSuggestionClicked', (event) => this.goItem(event.detail));
 	}
 	goItem(data) {
-		const a = this.querySelector(data.id);
-		a.focus();
+		const currentElement = this.querySelector(data.id);
+		currentElement.focus();
 	}
 	renderCategories() {
 		return this._categories.reduce(
