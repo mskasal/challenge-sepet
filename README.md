@@ -19,11 +19,11 @@ yarn build - create a dist folder and bundle everything
 ### Notes about challenge
 
 #### What did I do?
-I created a search page for an restaurant.
+I created a search page for a restaurant.
 A customer can search and find any product and category.
 They can add items to basket or delete them or change count of them.
 
-- I used Webpack for developer server and bundler.
+- I used Webpack for development server and bundler.
 - I used Babel for transpiler
 - Project developed with mostly ES6 and awesome features of it.
 - I experimented Web Components for a small/mid project and loved it.
