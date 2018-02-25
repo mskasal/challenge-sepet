@@ -14,7 +14,7 @@ h5.s-basket-title {
 }
 
 .sb-item-list {
-	padding-left: 0;
+	padding-left: 10px;
 	padding-bottom: 18px;
 	border-bottom: 1px solid #c1c1c1;
 	position: relative;
@@ -103,4 +103,7 @@ s-basket-item > li{
 
 .bs-empty {
 	padding: 20px 40px;
+	display: inline-block;
+	width: 200px;
+	text-align: center;
 }
